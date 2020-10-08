@@ -69,6 +69,7 @@ let unifiedServer = function(req,res){
         'trimmedPath' : trimPath,
         'queryStringObject' : queryStringObject,
         'method' : method,
+        'headers' : headers,
         'payload': helpers.parseJsonToObject(buffer)
       };
 
@@ -97,5 +98,5 @@ let unifiedServer = function(req,res){
 var router = {
   'ping': handlers.ping,
   'users' : handlers.users,
-  'token' : handlers.token
+  'tokens' : handlers.tokens
 };
